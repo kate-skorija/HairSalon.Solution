@@ -1,13 +1,37 @@
-body{
+body {
   margin: 30px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: antiquewhite;
+  color: #383838;
 }
 
 h2 {
+  font-size: 40px;
   margin: 20px 0;
+  font-weight: bold;
+  color: salmon;
 }
+
+/* Clients and Stylists Content ------ */
 
 ul {
   margin-bottom: 30px;
+}
+
+li {
+  font-size: 25px;
+}
+
+li a {
+  color:  mediumseagreen;
+}
+
+p {
+  font-size: 28px;
+}
+
+p a {
+  font-size: 22px;
 }
 
 /* Splash Page ------------------------ */
@@ -20,21 +44,20 @@ ul {
 #splash h1 {
   font-size: 160px;
   padding: 0;
-  margin-bottom: 20px;;
-  /* color: */
+  margin-bottom: 20px;
+  font-family: 'Patua One', cursive;
+  color: salmon;
 }
 
 #splash h2 {
-  /* font-family: ;
-  color: ; */
+  font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   margin-top: 0;
+  color: rgb(84, 92, 70);
 }
 
-#splash a {
-  font-size: 60px;
-  /* font-family: ;
-  color: ; */
+.blue {
+  color: cornflowerblue;
 }
 
 /* Forms ------------------------ */
@@ -50,4 +73,16 @@ label{
 
 input {
   float: left;
-  }
+  } 
+
+/* Navbar ------------------------- */
+
+nav li {
+  font-size: 20px;
+}
+.navbar li a {
+  color: rgb(84, 92, 70);
+}
+.navbar-brand {
+  color: rgb(84, 92, 70);
+}
