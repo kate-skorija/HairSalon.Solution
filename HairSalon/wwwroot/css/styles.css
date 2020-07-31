@@ -1,0 +1,53 @@
+body{
+  margin: 30px;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+ul {
+  margin-bottom: 30px;
+}
+
+/* Splash Page ------------------------ */
+
+#splash {
+  text-align: center;
+  margin: 100px;
+}
+
+#splash h1 {
+  font-size: 160px;
+  padding: 0;
+  margin-bottom: 20px;;
+  /* color: */
+}
+
+#splash h2 {
+  /* font-family: ;
+  color: ; */
+  font-size: 40px;
+  margin-top: 0;
+}
+
+#splash a {
+  font-size: 60px;
+  /* font-family: ;
+  color: ; */
+}
+
+/* Forms ------------------------ */
+
+label{
+
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+input {
+  float: left;
+  }

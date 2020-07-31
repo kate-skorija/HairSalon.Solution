@@ -10,7 +10,6 @@
 <p>Phone Number: @Html.DisplayFor(model => model.Phone)</p>
 <p>Stylist: @Html.DisplayFor(model => model.Stylist.Name)</p>
 
-<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
-<p>@Html.ActionLink("Back to Stylist", "Details", "Stylists", new { id = Model.Stylist.StylistId })
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })  |  
+  @Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })  |  
+  @Html.ActionLink("Back to Stylist", "Details", "Stylists", new { id = Model.Stylist.StylistId })</p>
