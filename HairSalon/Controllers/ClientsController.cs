@@ -13,7 +13,7 @@ namespace HairSalon.Controllers
 
     public ClientsController(HairSalonContext db)
     {
-      db = _db;
+      _db = db;
     }
     public ActionResult Index()
     {
@@ -22,9 +22,10 @@ namespace HairSalon.Controllers
     }
     public ActionResult Create()
     {
-      // ViewBag.Stylist = new SelectList(_db.Stylists, "StylistId", "Name");
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
       return View();
     }
+
     [HttpPost]
     public ActionResult Create(Client client)
     {
