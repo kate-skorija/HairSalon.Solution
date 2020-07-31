@@ -44,14 +44,30 @@ This C# MVC web application for a fictional salon. It was built to help the salo
 
 ## Setup/Installation Requirements
 
+*_These instructions are specifically for MySql Workbench, but should work similarly for or any generic SQL database manager._* 
+
 1.  Navigate to the [HairSalon.Solution respository](https://github.com/kate-skorija/HairSalon.Solution) or open your terminal
 
 2. Clone this project using the GitHub button or the command:
 `$ git clone https://github.com/kate-skorija/HairSalon.Solution.git`
 
-3. Navigate to the `HairSalon.Solution` directory in your editor of choice, or use [Visual Studio Code](https://code.visualstudio.com/)
+3. Next ensure the MySQL server is running by opening your terminal and entering the command `mysql -uroot -pepicodus` (or your equivalent username and password).
 
-4. Within the project, navigate to the HairSalon directory, and type `dotnet restore`, then `dotnet build`. Once the build is complete, type `dotnet run` into the terminal. Click on the provided local host link in the terminal to view the web application in your browser. 
+4. Open MySql Workbench and click on the Administration tab. 
+
+5. Click on 'Data Import/Restore' in the left-hand column.
+
+6. Select 'Import from Self-Contained File', and enter the path to kate_skorija.sql, which will depend on where you cloned the repository. An example path could be: /Users/yourname/desktop/HairSalon.Solution/kate_skorija.sql.
+
+7. Click on the 'New...' button in the Default Schema to be Imported To section, and for the schema name enter 'kate_skorija'.
+
+8. In the dropdown below, select whether you would like to import only the data structure (Dump Structure Only), or whether you would like to dump both the structure and the data previously entered (Dump Structure and Data).
+
+9. Click the 'Start Import' button to finish adding the database. 
+
+10. Navigate to the `HairSalon.Solution` directory in your editor of choice, or use [Visual Studio Code](https://code.visualstudio.com/)
+
+11. Within the project, navigate to the HairSalon directory, and type `dotnet restore`, then `dotnet build`. Once the build is complete, type `dotnet run` into the terminal. Click on the provided local host link in the terminal to view the web application in your browser. 
 
 ## Known Bugs
 
