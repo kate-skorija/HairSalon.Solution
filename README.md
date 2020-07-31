@@ -6,19 +6,11 @@
 
 ## Description
 
-This C# MVC web application for a fictional salon. It was built to help the salon owner track the stylists at the salon, and each of their clients. 
+This week I focused on making databases with raw SQL and MySql Workbench. Later on in the week I also learned how to implement Entity Framework to communicate with databases. This specific project is a C# MVC web application for a fictional salon. It was built to help the salon owner track the stylists at the salon, and each of their clients. 
 
 ## Specifications
 
-**Behavior**: Program will allow the user to create a stylist.
-  * Input: "April Ludgate"
-  * Output: April Ludgate is now a new stylist object
-
-**Behavior**: Program will allow the user to track the clients for each stylist added.
-  * Input: "Ron Swanson", "Andy Dwyer", "Leslie Knope"
-  * Output: Ron Swanson, Andy Dwyer, and Leslie Knope are added as client objects of stylist April Ludgate
-
-**Behavior**: Program will have a homepage where users can choose to view the current list of stylists.
+**Behavior**: Program will have a homepage where users can choose to view the current list of stylists and/or clients.
   * Input: *User clicks "View stylists"*
   * Output: User is taken to a page with a list of stylists
 
@@ -26,9 +18,9 @@ This C# MVC web application for a fictional salon. It was built to help the salo
   * Input: *User clicks "Add a new stylist"*
   * Output: User is taken to a form to add a new stylist
 
-**Behavior**: Program will return user to the homepage after submission of the stylist form. 
+**Behavior**: Program will return user to the stylist list page after submission of the stylist form. 
   * Input: *User submits new stylist form*
-  * Output: User is taken to the homepage
+  * Output: User is taken to the stylist list page
 
 **Behavior**: Program will have a detail page for each stylist that lists that stylist's clients.
   * Input: *User clicks "April Ludgate"*
@@ -39,8 +31,20 @@ This C# MVC web application for a fictional salon. It was built to help the salo
   * Output: User is taken to a page with a form to add another client for April Ludgate
 
 **Behavior**: Program will return user to the stylist detail page after submission of the client form. 
-  * Input: *User submits new clientform*
+  * Input: *User submits new client form*
   * Output: User is taken back to stylist detail page
+
+**Behavior**: Program will have a detail page for each client that lists that client's properties.
+  * Input: *User clicks "Ron Swanson"*
+  * Output: User is taken to a page with a Ron Swanson's name, phone number, and current stylist
+
+**Behavior**: Program will user to edit or delete a stylist
+  * Input: *User clicks edit stylist*
+  * Output: User can change stylist name, phone number, or work station
+
+**Behavior**: Program will user to edit or delete a client 
+  * Input: *User clicks edit client*
+  * Output: User can change client name, phone number, or assign them to a new stylist
 
 ## Setup/Installation Requirements
 
@@ -84,15 +88,15 @@ CREATE TABLE `stylists` (
   `WorkStation` varchar(2) NOT NULL,  
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,  
   PRIMARY KEY (`StylistId`)  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;  
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `clients` (  
   `Name` varchar(255) NOT NULL,  
   `Phone` varchar(14) NOT NULL,  
-  `StylistId` int(11) NOT NULL,  
-  KEY `StylistId_idx` (`StylistId`),  
-  CONSTRAINT `StylistId` FOREIGN KEY (`StylistId`) REFERENCES `stylists`   (`StylistId`)  
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;  
+  `ClientId` int(11) NOT NULL AUTO_INCREMENT,  
+  `StylistId` int(11) NOT NULL DEFAULT '0',  
+  PRIMARY KEY (`ClientId`)  
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 ## Known Bugs
 
