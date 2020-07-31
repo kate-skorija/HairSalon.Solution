@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+@model HairSalon.Models.Client
+
+<h2>Delete this client: @Model.Name?</h2>
+
+@using (Html.BeginForm())
+{
+  <input type="submit", value="Delete" />
+}
