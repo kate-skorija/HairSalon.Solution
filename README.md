@@ -69,6 +69,31 @@ This C# MVC web application for a fictional salon. It was built to help the salo
 
 11. Within the project, navigate to the HairSalon directory, and type `dotnet restore`, then `dotnet build`. Once the build is complete, type `dotnet run` into the terminal. Click on the provided local host link in the terminal to view the web application in your browser. 
 
+### SQL Schema Query
+
+*_The SQL commands below could also be used with any SQL manager to create the database for this project_*
+
+DROP DATABASE IF EXISTS `kate_skorija`;  
+CREATE DATABASE `kate_skorija`;  
+
+USE `kate_skorija`;
+
+CREATE TABLE `stylists` (  
+  `Name` varchar(255) NOT NULL,  
+  `Phone` varchar(14) NOT NULL,  
+  `WorkStation` varchar(2) NOT NULL,  
+  `StylistId` int(11) NOT NULL AUTO_INCREMENT,  
+  PRIMARY KEY (`StylistId`)  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;  
+
+CREATE TABLE `clients` (  
+  `Name` varchar(255) NOT NULL,  
+  `Phone` varchar(14) NOT NULL,  
+  `StylistId` int(11) NOT NULL,  
+  KEY `StylistId_idx` (`StylistId`),  
+  CONSTRAINT `StylistId` FOREIGN KEY (`StylistId`) REFERENCES `stylists`   (`StylistId`)  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;  
+
 ## Known Bugs
 
 There are no known bugs at this time.
