@@ -39,11 +39,11 @@ This week I focused on making databases with raw SQL and MySql Workbench. Later 
   * Output: User is taken to a page with a Ron Swanson's name, phone number, and current stylist
 
 **Behavior**: Program will user to edit or delete a stylist
-  * Input: *User clicks edit stylist*
+  * Input: *User clicks "Edit Stylist"*
   * Output: User can change stylist name, phone number, or work station
 
 **Behavior**: Program will user to edit or delete a client 
-  * Input: *User clicks edit client*
+  * Input: *User clicks "Edit Client"*
   * Output: User can change client name, phone number, or assign them to a new stylist
 
 ## Setup/Installation Requirements
